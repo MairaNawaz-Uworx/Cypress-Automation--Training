@@ -5,16 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "cy:run:headless": "cypress run --headless",
-    "cy:run:chrome": "cypress run --browser chrome",
-    "cy:run:firefox": "cypress run --browser firefox",
-    "cy:run:record": "cypress run --record",
-    "cy:clear": "cypress cache clear",
-    "cy:verify": "cypress verify",
-    "cy:info": "cypress info",
-    "cy:install": "cypress install"
+    "triggerAllTest-headless": "npx cypress run",
+    "triggerAllTest-headed": "npx cypress run --headed",
+    "triggerAllTest-chrome": "npx cypress run --browser chrome",
+    "triggerAllTest-dashboard": "npx cypress run --record --key [key]"
   },
   "author": "",
   "license": "ISC",
