@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="49.008" tests="9" failures="3">
+  <testsuite name="Root Suite" timestamp="2024-02-02T07:45:16" tests="0" file="cypress\e2e\basic.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Contact Us via Webdriveruni" timestamp="2024-02-02T07:45:16" tests="9" time="49.000" failures="3">
+    <testcase name="Test Contact Us via Webdriveruni Should be able to submit a successful submission" time="5.167" classname="Should be able to submit a successful submission">
+    </testcase>
+    <testcase name="Test Contact Us via Webdriveruni Should not be able to submit a successful submission" time="1.062" classname="Should not be able to submit a successful submission">
+    </testcase>
+    <testcase name="Test Contact Us via Webdriveruni Selectors" time="0.000" classname="Selectors">
+      <failure message="Timed out retrying after 4000ms: Expected to find content: &apos;Makeup&apos; within the element: &lt;input#keyword.form-control.&gt; but never did." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Makeup' within the element: <input#keyword.form-control.> but never did.
+    at Context.eval (webpack://cypress-automation--training/./cypress/e2e/basic.js:30:62)]]></failure>
+    </testcase>
+    <testcase name="Test Contact Us via Webdriveruni Implicit Assertions" time="0.000" classname="Implicit Assertions">
+      <failure message="Timed out retrying after 4000ms: expected &apos;about:blank&apos; to include &apos;http://www.webdriveruniversity.com/&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected 'about:blank' to include 'http://www.webdriveruniversity.com/'
+    at Context.eval (webpack://cypress-automation--training/./cypress/e2e/basic.js:37:21)]]></failure>
+    </testcase>
+    <testcase name="Test Contact Us via Webdriveruni Click on contact us on footer" time="5.489" classname="Click on contact us on footer">
+    </testcase>
+    <testcase name="Test Contact Us via Webdriveruni Radio Buttons and Checkboxes" time="1.910" classname="Radio Buttons and Checkboxes">
+    </testcase>
+    <testcase name="Test Contact Us via Webdriveruni DropDowns " time="0.000" classname="DropDowns ">
+      <failure message="`cy.click()` cannot be called on a `&lt;select&gt;` element. Use `cy.select()` command instead to change the value.
+
+https://on.cypress.io/select" type="CypressError"><![CDATA[CypressError: `cy.click()` cannot be called on a `<select>` element. Use `cy.select()` command instead to change the value.
+
+https://on.cypress.io/select
+    at perform (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:111591:70)
+    at tryCatcher (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:1807:23)
+    at Object.gotValue (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:6476:18)
+    at Object.gotAccum (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:6465:25)
+    at Object.tryCatcher (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:1807:23)
+    at Promise._settlePromiseFromHandler (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:1519:31)
+    at Promise._settlePromise (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:1576:18)
+    at Promise._settlePromiseCtx (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:1613:10)
+    at _drainQueueStep (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:2411:12)
+    at _drainQueue (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:2400:9)
+    at Async._drainQueues (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:2416:5)
+    at Async.drainQueues (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:2286:14)
+From Your Spec Code:
+    at Context.eval (webpack://cypress-automation--training/./cypress/e2e/basic.js:87:56)]]></failure>
+    </testcase>
+    <testcase name="Test Contact Us via Webdriveruni Dynamic Dropdown" time="3.949" classname="Dynamic Dropdown">
+    </testcase>
+    <testcase name="Test Contact Us via Webdriveruni Alerts" time="2.528" classname="Alerts">
+    </testcase>
+  </testsuite>
+</testsuites>

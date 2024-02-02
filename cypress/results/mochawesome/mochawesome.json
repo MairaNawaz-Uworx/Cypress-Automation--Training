@@ -1,0 +1,276 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 9,
+    "passes": 5,
+    "pending": 0,
+    "failures": 4,
+    "start": "2024-02-02T08:02:02.791Z",
+    "end": "2024-02-02T08:03:01.185Z",
+    "duration": 58394,
+    "testsRegistered": 9,
+    "passPercent": 55.55555555555556,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0f2bc2cd-7c19-4522-a2b1-52d70d88418a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\basic.js",
+      "file": "cypress\\e2e\\basic.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "549f18e5-cb27-4982-9345-fc6df7a7d60e",
+          "title": "Test Contact Us via Webdriveruni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should be able to submit a successful submission",
+              "fullTitle": "Test Contact Us via Webdriveruni Should be able to submit a successful submission",
+              "timedOut": null,
+              "duration": 6047,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.webdriveruniversity.com/Contact-Us/contactus.html\");\ncy.get(\"input[placeholder='First Name']\").type(\"Joe\");\ncy.get(\"input[placeholder='Last Name']\").type(\"Robert\");\ncy.get(\"input[placeholder='Email Address']\").type(\"johnrobert@gmail.com\");\ncy.get(\"textarea[placeholder='Comments']\").type(\"Hy My Name is Maira and I'm working at Uworx\");\ncy.get(\"input[value='SUBMIT']\").click();\ncy.get('h1').should('have.text', \"Thank You for your Message!\");",
+              "err": {},
+              "uuid": "c3825ac2-f646-4758-8619-042ba188879e",
+              "parentUUID": "549f18e5-cb27-4982-9345-fc6df7a7d60e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should not be able to submit a successful submission",
+              "fullTitle": "Test Contact Us via Webdriveruni Should not be able to submit a successful submission",
+              "timedOut": null,
+              "duration": 1575,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.webdriveruniversity.com/\");\ncy.title().should('eq', \"WebDriverUniversity.com\");",
+              "err": {},
+              "uuid": "d53a7ced-dcdb-4200-b936-cb5638bee8d2",
+              "parentUUID": "549f18e5-cb27-4982-9345-fc6df7a7d60e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Selectors",
+              "fullTitle": "Test Contact Us via Webdriveruni Selectors",
+              "timedOut": null,
+              "duration": 9638,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://automationteststore.com/\");\ncy.get('#filter_keyword').type(\"Makeup\");\ncy.get('.button-in-search > .fa').click();\n//cy.get (\".input-group> #keyword\").should('have.value', 'Makeup');\ncy.get(\".input-group> #keyword\").should(\"exist\").contains('Makeup');\n//cy.get('.logo > img').should('be.visible')\n//.and('exist')",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Makeup' within the element: <input#keyword.form-control.> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Makeup' within the element: <input#keyword.form-control.> but never did.\n    at Context.eval (webpack://cypress-automation--training/./cypress/e2e/basic.js:30:62)",
+                "diff": null
+              },
+              "uuid": "15d4e939-b1c3-4d9e-9ede-24aa058c5b02",
+              "parentUUID": "549f18e5-cb27-4982-9345-fc6df7a7d60e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Implicit Assertions",
+              "fullTitle": "Test Contact Us via Webdriveruni Implicit Assertions",
+              "timedOut": null,
+              "duration": 4294,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.url().should('include', \"http://www.webdriveruniversity.com/\");\ncy.url().should('eq', \"http://www.webdriveruniversity.com/\");\ncy.url().should('contain', \"http://www.webdriveruniversity.com/\");\n//rather than writing writing separate assertions we can use \"and\" like this\ncy.url().should('include', \"http://www.webdriveruniversity.com/\").and('eq', \"http://www.webdriveruniversity.com/\").and('contain', \"http://www.webdriveruniversity.com/\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'about:blank' to include 'http://www.webdriveruniversity.com/'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'about:blank' to include 'http://www.webdriveruniversity.com/'\n    at Context.eval (webpack://cypress-automation--training/./cypress/e2e/basic.js:37:21)",
+                "diff": null
+              },
+              "uuid": "9f1388da-8268-4e7b-9b85-e81178c7d03b",
+              "parentUUID": "549f18e5-cb27-4982-9345-fc6df7a7d60e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Click on contact us on footer",
+              "fullTitle": "Test Contact Us via Webdriveruni Click on contact us on footer",
+              "timedOut": null,
+              "duration": 5402,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://automationteststore.com/\");\ncy.get(\"a[href='https://automationteststore.com/index.php?rt=content/contact']\").click();\ncy.get('#ContactUsFrm_first_name').type(\"Maira\");\ncy.get('#ContactUsFrm_email').type(\"mairanawaz98@gmail.com\");\ncy.get('#ContactUsFrm_email').should('have.attr', 'name', 'email');\ncy.get('#ContactUsFrm_enquiry').type(\"I haven't recieved my parcel\");\ncy.get('.col-md-6 > .btn').click();\ncy.get(\".mb40 > :nth-child(3)\").should('have.text', \"Your enquiry has been successfully sent to the store owner!\");",
+              "err": {},
+              "uuid": "b7a69630-3bb7-4653-80b9-a48bc32c48b3",
+              "parentUUID": "549f18e5-cb27-4982-9345-fc6df7a7d60e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Radio Buttons and Checkboxes",
+              "fullTitle": "Test Contact Us via Webdriveruni Radio Buttons and Checkboxes",
+              "timedOut": null,
+              "duration": 2189,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html\");\n//cy.get(\".radio-buttons > [value='yellow']\").click()\ncy.get(\".radio-buttons > [value='yellow']\").check().should('be.checked');\n//cy.get(\".radio-buttons > [value='yellow']\").check().should('not.be.checked') //negative test\n//uncheck don't work on radio buttons \n//checkboxes\ncy.get('.section-title input[value=\"option-1\"]').should(\"be.visible\"); //present or not\n// cy.get(\"#checkboxes > :nth-child(1)\").check().should('be.checked')\ncy.get('.section-title input[value=\"option-1\"]').check().should('be.checked');\n// the checkboxes are inside <label> elements, and they don't have a direct parent-child relationship with the .section-title element. Therefore, using > (child combinator) in the selector might not be appropriate.\ncy.get('.section-title input[value=\"option-3\"]').uncheck().should('not.be.checked');\n//selecting all the checkboxes\ncy.get(\"input[type='checkbox']\").check().should(\"be.checked\");\n//.first and .last can be used to select first and last checkbox",
+              "err": {},
+              "uuid": "c0b78452-d287-4227-8a05-89d6fb3c1df6",
+              "parentUUID": "549f18e5-cb27-4982-9345-fc6df7a7d60e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "DropDowns ",
+              "fullTitle": "Test Contact Us via Webdriveruni DropDowns ",
+              "timedOut": null,
+              "duration": 934,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//we use select for dropdown \n//.type('{enter}')\ncy.visit(\"http://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html\");\ncy.get(\".section-title > #dropdowm-menu-1\").select(\"C#\").should('have.value', \"c#\");\ncy.get(\".section-title > #dropdowm-menu-1\").click(); // its not clicking \ncy.visit(\"https://www.wikipedia.org/\");\ncy.get(\"#searchInput\").type(\"Delhi\");\ncy.get('.suggestion-title').contains(\"Delhi University\").click();",
+              "err": {
+                "message": "CypressError: `cy.click()` cannot be called on a `<select>` element. Use `cy.select()` command instead to change the value.\n\nhttps://on.cypress.io/select",
+                "estack": "CypressError: `cy.click()` cannot be called on a `<select>` element. Use `cy.select()` command instead to change the value.\n\nhttps://on.cypress.io/select\n    at perform (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:111591:70)\n    at tryCatcher (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Object.gotValue (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:6476:18)\n    at Object.gotAccum (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:6465:25)\n    at Object.tryCatcher (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromiseCtx (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:1613:10)\n    at _drainQueueStep (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:2411:12)\n    at _drainQueue (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://www.webdriveruniversity.com/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress-automation--training/./cypress/e2e/basic.js:87:56)",
+                "diff": null
+              },
+              "uuid": "bc2eb8f2-6c59-4c58-9df2-fbea5a1f6bde",
+              "parentUUID": "549f18e5-cb27-4982-9345-fc6df7a7d60e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Dynamic Dropdown",
+              "fullTitle": "Test Contact Us via Webdriveruni Dynamic Dropdown",
+              "timedOut": null,
+              "duration": 8665,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.google.com/\");\ncy.get(\"#APjFqb\").type(\"cypress automation\"); // searching\n//capture all options \n//count total number of options\ncy.get(\".wM6W7d> span\").each(($el, index, $list) => {\n  if ($el.text() == \"cypress automation tutorial\") {\n    cy.wrap($el).click();\n  }\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because the page updated while this command was executing. Cypress tried to locate elements based on this query:\n\n> <span>\n\nWe initially found matching element(s), but while waiting for them to become actionable, they disappeared from the page. Common situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou can typically solve this by breaking up a chain. For example, rewrite:\n\n> `cy.get('button').click().click()`\n\nto\n\n> `cy.get('button').as('btn').click()`\n> `cy.get('@btn').click()`\n\nhttps://on.cypress.io/element-has-detached-from-dom",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because the page updated while this command was executing. Cypress tried to locate elements based on this query:\n\n> <span>\n\nWe initially found matching element(s), but while waiting for them to become actionable, they disappeared from the page. Common situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou can typically solve this by breaking up a chain. For example, rewrite:\n\n> `cy.get('button').click().click()`\n\nto\n\n> `cy.get('button').as('btn').click()`\n> `cy.get('@btn').click()`\n\nhttps://on.cypress.io/element-has-detached-from-dom\n    at retryActionability (https://www.google.com/__cypress/runner/cypress_runner.js:112363:74)\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://www.google.com/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://www.google.com/__cypress/runner/cypress_runner.js:143916:68)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:143857:14)\n    at tryCatcher (https://www.google.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.google.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.google.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.google.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.google.com/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://www.google.com/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://www.google.com/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress-automation--training/./cypress/e2e/basic.js:102:33)",
+                "diff": null
+              },
+              "uuid": "f9ff041e-0568-4a8c-a2b2-655b7ea2d89a",
+              "parentUUID": "549f18e5-cb27-4982-9345-fc6df7a7d60e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Alerts",
+              "fullTitle": "Test Contact Us via Webdriveruni Alerts",
+              "timedOut": null,
+              "duration": 2567,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//1.javascript alerts : it will have some text and a \"OK\" button\n//2.javascript confirm alerts : it will have some text with \"OK\" and \"Cancel\" button\n//3. javascript Prompt alert : it will have some text with textboxes for user input along  with \"ok\"\n//4.authentictad alert\n//cypress automatically handles alert window but for validations on alert window you have to write code\n//so we have to triger \"event\"\n//JavaScript Alert\ncy.visit(\"http://www.webdriveruniversity.com/Popup-Alerts/index.html\");\ncy.get(\".section-title > #button1\").click(); //can't see alert window because it is handled by cypress\n//in order to validate text inside alert window \ncy.on(\"window:alert\", t => {\n  expect(t).to.contains(\"I am an alert box!\");\n});\n//js Confirm Alert\ncy.get(\".section-title >#button4\").click(); //by default cypress clicks on ok button\ncy.on(\"window:confirm\", t => {\n  expect(t).to.contains(\"Press a button!\");\n});\n//for cancel button\ncy.get(\".section-title >#button4\").click();\ncy.on(\"window:confirm\", () => false);\ncy.get(\"#confirm-alert-text\").should(\"have.text\", \"You pressed Cancel!\");",
+              "err": {},
+              "uuid": "3aa1531e-6777-4856-9d31-626e795e3c67",
+              "parentUUID": "549f18e5-cb27-4982-9345-fc6df7a7d60e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c3825ac2-f646-4758-8619-042ba188879e",
+            "d53a7ced-dcdb-4200-b936-cb5638bee8d2",
+            "b7a69630-3bb7-4653-80b9-a48bc32c48b3",
+            "c0b78452-d287-4227-8a05-89d6fb3c1df6",
+            "3aa1531e-6777-4856-9d31-626e795e3c67"
+          ],
+          "failures": [
+            "15d4e939-b1c3-4d9e-9ede-24aa058c5b02",
+            "9f1388da-8268-4e7b-9b85-e81178c7d03b",
+            "bc2eb8f2-6c59-4c58-9df2-fbea5a1f6bde",
+            "f9ff041e-0568-4a8c-a2b2-655b7ea2d89a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 41311,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
