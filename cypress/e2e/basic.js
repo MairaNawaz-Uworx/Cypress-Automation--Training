@@ -91,7 +91,7 @@ describe("Test Contact Us via Webdriveruni", ()=>{
             cy.get('.suggestion-title').contains("Delhi University").click();
          })
     
-         it.only("Dynamic Dropdown", ()=>{
+         it("Dynamic Dropdown", ()=>{
             cy.visit("https://www.google.com/")
             cy.get ("#APjFqb").type("cypress automation") // searching
             //capture all options 
